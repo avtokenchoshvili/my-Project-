@@ -1,4 +1,22 @@
+
+
+
+<!-- <ng-container>
+
+    <app-nav></app-nav>
+
+
+   
+        <router-outlet ></router-outlet>
+ <app-porfolio></app-porfolio>
+   <app-footer></app-footer>
+
+</ng-container> -->
+
 <app-nav></app-nav>
 <app-main></app-main>
+<router-outlet (active)="onActive()"></router-outlet>
+
 <app-footer></app-footer>
+
 
