@@ -8,8 +8,8 @@ import { SignUpComponent } from './header/sign-up/sign-up.component';
 import { BlogComponent } from './header/blog/blog.component';
 import { BlogListComponent } from './header/blog-list/blog-list.component';
 import { SignInComponent } from './header/sign-in/sign-in.component';
-import { DashboardComponent } from './adminPanel/dashboard/dashboard.component';
 
+import { AdminModule} from 'src/app/admin/admin/admin.module';
 
 
 
@@ -23,7 +23,7 @@ const routes:Routes = [
   {path:'blog' ,component:BlogListComponent ,title: 'Blog'},
   {path:'blog-detail/:id',component:BlogComponent, title: 'Blog'},
   {path:'sign-in',component:SignInComponent , title: 'Sign'},
-  {path:'dashboard' , component:DashboardComponent ,title: 'Dashboard'},
+
   {path: 'admin' , loadChildren:()=> import('./admin/admin/admin.module').then(m=>m.AdminModule)},
   
 ]
@@ -33,6 +33,7 @@ const routes:Routes = [
  
   imports: [
     CommonModule,
+    AdminModule,
     RouterModule.forRoot(routes, {scrollPositionRestoration: 'enabled'})
   ],
   exports:[RouterModule],

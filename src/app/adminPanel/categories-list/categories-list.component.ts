@@ -8,7 +8,16 @@ import { Categories } from 'src/app/interface/categories.interface';
   styleUrls: ['./categories-list.component.css']
 })
 export class CategoriesListComponent {
-@Input()categoryesList$!: Observable<Categories[]> ;
+@Input()categoryesList$!: Observable<Categories[]>  ;
 
+
+
+ngOnInit(): void {
+  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //Add 'implements OnIconit' to the class.
+  console.log(this.categoryesList$  + 'saaaaaaaaaaa')
+}
+
+   
 
 }

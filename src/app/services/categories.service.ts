@@ -13,11 +13,11 @@ export class CategoriesService {
 
 
     getAllCategory(): Observable<Categories[]> {
-      return this._http.get<Categories[]>(`${environment.api}/api/categories`);
+      return this._http.get<Categories[]>(`${environment.baseUrl}/api/categories`);
     }
   
     deleteCategory(categoryId: string) {
-      return this._http.delete(`${environment.api}/api/categories/${categoryId}`)
+      return this._http.delete(`${environment.baseUrl}/api/categories/${categoryId}`)
     }
 
 
