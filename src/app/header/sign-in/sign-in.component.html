@@ -1,6 +1,28 @@
-<div>
+<div class="container">
+  <form [formGroup]="LoginForm"> 
+  
+    <div class="form-group">
+      <mat-form-field appearance="outline" color="primary">
+          <mat-icon matPrefix>email</mat-icon>
+        <mat-label>email</mat-label>
+        <input class="form-control"  type="email" matInput  formControlName="email" required>
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline" color="primary">
+          <mat-icon matPrefix>lock_outline</mat-icon>
+        <mat-label>password</mat-label>
+        <input class="form-control"  type="password" matInput formControlName="password" type="password" required>
+      </mat-form-field>
+    </div>
 
-
-
+    <div>
     
-</div>
+  
+    <button (click)="login()" mat-raised-button color="primary" >
+     sign in
+      </button>
+   
+  </div>
+</form>
+  </div>

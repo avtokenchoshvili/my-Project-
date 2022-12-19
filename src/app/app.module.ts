@@ -10,7 +10,7 @@ import { BlogComponent } from './header/blog/blog.component';
 import { MyWorksComponent } from './header/my-works/my-works.component';
 import { ContactComponent } from './header/contact/contact.component';
 
-
+import { BlogListComponent } from './header/blog-list/blog-list.component';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PorfolioComponent } from './header/porfolio/porfolio.component';
@@ -22,6 +22,13 @@ import { SignUpComponent } from './header/sign-up/sign-up.component';
 import { ReactiveFormsModule ,FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './header/nav/nav.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './adminPanel/dashboard/dashboard.component';
+import { AddBlogComponent } from './adminPanel/add-blog/add-blog.component';
+import { CategoriesComponent } from './adminPanel/categories/categories.component';
+import { TagsComponent } from './adminPanel/tags/tags.component';
+
+
 
 
 @NgModule({
@@ -36,12 +43,18 @@ import { NavComponent } from './header/nav/nav.component';
     BlogComponent,
     MyWorksComponent,
     ContactComponent,
-    PorfolioComponent
+    PorfolioComponent,
+    BlogListComponent,
+    DashboardComponent,
+    AddBlogComponent,
+    CategoriesComponent,
+    TagsComponent
+    
   ],
 
   imports: [
  
-    
+   
     BrowserModule,
     NgxHideOnScrollModule,
     ReactiveFormsModule,
@@ -49,7 +62,8 @@ import { NavComponent } from './header/nav/nav.component';
     BrowserAnimationsModule,
     FontAwesomeModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
    
     
   ],

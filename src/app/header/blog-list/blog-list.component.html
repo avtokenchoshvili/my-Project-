@@ -1,0 +1,43 @@
+
+<ng-container   *ngFor="let blog  of blogs$ | async">
+
+
+
+
+<div class="blog-list-card">
+
+
+    <mat-card [ngStyle]="{'overflow': 'hidden'}" layout="row" layout-margin layout-wrap layout-align="center center" flex="25">
+        <mat-card-header class="flex">
+          <img mat-card-avatar src="/assets/photo/r2n21nrx9xj81.jpg">
+          <mat-card-subtitle>
+            Yesterday
+          </mat-card-subtitle>
+          <mat-card-title>{{blog.title}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src="/assets/photo/Qt1OsC.webp">
+        <mat-card-content>
+          <p [innerHTML]="blog.description"> </p>
+        </mat-card-content>
+        <mat-divider></mat-divider>
+        <mat-card-actions>
+          <div class="flex">
+         
+            <span class="flex-1"></span>
+            <button mat-button routerLink="/blog-detail/{{blog._id}} ">
+              More Info 
+            </button>
+           
+          </div>
+        </mat-card-actions>
+      </mat-card>
+    
+    
+
+
+
+
+</div>
+
+</ng-container>
+

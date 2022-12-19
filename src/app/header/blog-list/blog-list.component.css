@@ -1,0 +1,22 @@
+
+
+.mdc-card__media {
+    width: 400px;
+}
+
+.mat-mdc-card{
+    overflow: hidden;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.mat-mdc-card {
+    box-shadow: none;
+}
+
+.blog-list-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
