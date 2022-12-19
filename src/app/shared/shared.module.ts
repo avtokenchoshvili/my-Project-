@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SharedRoutingModule } from './shared-routing.module';
+
 
 
 import {MatToolbarModule} from '@angular/material/toolbar';
@@ -17,6 +17,10 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {LayoutModule} from '@angular/cdk/layout';
 
 import {MatListModule} from '@angular/material/list';
+
+
+
+
 
 @NgModule({
   declarations: [],
@@ -45,7 +49,7 @@ import {MatListModule} from '@angular/material/list';
     MatInputModule,
     MatSelectModule,
     CommonModule,
-    SharedRoutingModule,
+ 
     MatButtonModule,
     MatDividerModule,
     MatSliderModule,
@@ -53,6 +57,7 @@ import {MatListModule} from '@angular/material/list';
     MatSidenavModule,
     LayoutModule,
     MatListModule,
+   
    
   
   ]

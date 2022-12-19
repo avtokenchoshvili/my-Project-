@@ -23,10 +23,6 @@ import { ReactiveFormsModule ,FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './header/nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
-import { DashboardComponent } from './adminPanel/dashboard/dashboard.component';
-import { AddBlogComponent } from './adminPanel/add-blog/add-blog.component';
-import { CategoriesComponent } from './adminPanel/categories/categories.component';
-import { TagsComponent } from './adminPanel/tags/tags.component';
 
 
 
@@ -45,11 +41,7 @@ import { TagsComponent } from './adminPanel/tags/tags.component';
     ContactComponent,
     PorfolioComponent,
     BlogListComponent,
-    DashboardComponent,
-    AddBlogComponent,
-    CategoriesComponent,
-    TagsComponent
-    
+   
   ],
 
   imports: [
