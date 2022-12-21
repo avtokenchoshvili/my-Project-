@@ -1,6 +1,7 @@
 import { Component } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
-import { Router } from "@angular/router";
+import { NavigationEnd, Router } from "@angular/router";
+import { filter, first } from "rxjs";
 import { LoginService } from "src/app/services/login.service";
 
 @Component({
@@ -22,7 +23,22 @@ export class SignInComponent {
       email: [`valeri.kharitonashvili1@gmail.com`],
       password: [`123123123`]
     })
+
+   
+      // this._router.events
+      //   .pipe(
+      //     filter((e) => e instanceof NavigationEnd && !e.url.startsWith('sing-in')),
+      //     first()
+      //   )
+      //   .subscribe(() => {
+      //     localStorage.removeItem('user');
+      //   });
+
   }
+
+
+
+
   login() {
     this._loginService.login(this.LoginForm.value).subscribe(
       (res) => {
@@ -35,4 +51,8 @@ export class SignInComponent {
       }
     );
   }
+
+
+
+
 }

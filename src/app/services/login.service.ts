@@ -9,7 +9,8 @@ import { User } from '../interface/user.interface';
 })
 export class LoginService {
   public isLoggedIn$: BehaviorSubject<boolean> = new BehaviorSubject(false);
-  public isAdmin$: BehaviorSubject<boolean> = new BehaviorSubject(false);
+  public isAdmin$: BehaviorSubject<boolean> = new BehaviorSubject(false );
+public isVerify$:BehaviorSubject<boolean> = new BehaviorSubject(false);
 
 
   constructor(
@@ -36,7 +37,7 @@ public logout(): void {
   localStorage.removeItem('isAdmin');
   this.isLoggedIn$.next(false);
   this.isAdmin$.next(false);
-  this._router.navigateByUrl('main');
+  this._router.navigateByUrl('#');
 }
 
 

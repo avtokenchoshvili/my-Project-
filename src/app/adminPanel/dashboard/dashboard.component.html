@@ -12,21 +12,24 @@
 			</mat-list-item>
 			<div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="isShowing || isExpanded">
 				<a mat-list-item routerLink="/add-blog">Add Blog</a>
-				<a mat-list-item routerLink="/categories-list">Categories</a>
+				<a mat-list-item routerLink="/categories/list">Categories</a>
 				<a mat-list-item routerLink="/tags">Tags</a>
 				
+			
 			</div>
+			<button (click)="logOutaa()" >Logout</button>
 		</mat-nav-list>
     <mat-nav-list>
 </mat-nav-list>
 	</mat-sidenav>
 
 	<div class="example-sidenav-content">
-		Main content that resizes properly
+        <!-- <app-categories></app-categories> -->
+        
 	</div>
 
 </mat-sidenav-container>
-<app-categories></app-categories>
+
 <router-outlet></router-outlet>
 
 

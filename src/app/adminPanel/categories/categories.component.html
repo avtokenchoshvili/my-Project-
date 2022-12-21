@@ -1,5 +1,7 @@
-<div *ngFor="let cat of categories$ | async">
 
-{{cat.title}}
-<app-categories-list [categoryesList$]="categories$" ></app-categories-list>
-</div>
+<!-- <div *ngFor="let cat of categories$ | async">
+
+
+
+</div> -->
+<app-categories-list [ngClass]="{'list': true}" [categoryesList$]="categories$" ></app-categories-list>

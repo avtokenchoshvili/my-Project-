@@ -17,6 +17,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {LayoutModule} from '@angular/cdk/layout';
 
 import {MatListModule} from '@angular/material/list';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 
@@ -38,7 +39,7 @@ import {MatListModule} from '@angular/material/list';
     MatSidenavModule,
     LayoutModule,
     MatListModule,
-    
+    MatDialogModule,
     
   ],
   imports: [
@@ -57,6 +58,7 @@ import {MatListModule} from '@angular/material/list';
     MatSidenavModule,
     LayoutModule,
     MatListModule,
+    MatDialogModule
    
    
   

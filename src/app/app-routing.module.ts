@@ -16,13 +16,13 @@ import { AdminModule} from 'src/app/admin/admin/admin.module';
 
 
 const routes:Routes = [
-  {path:'home',component: MainComponent ,title: 'Home'},
-  {path:'porfolio',component:PorfolioComponent ,title: 'Porfolio'},
-  {path:'footer',component:FooterComponent  ,title: 'Footer'},
-  {path:'sign-up',component:SignUpComponent , title: 'Sign Up'},
+  {path:'home',component: MainComponent ,title: 'Home', },
+  {path:'porfolio',component:PorfolioComponent ,title: 'Porfolio' },
+  {path:'footer',component:FooterComponent  ,title: 'Footer' },
+  {path:'sign-up',component:SignUpComponent , title: 'Sign Up' },
   {path:'blog' ,component:BlogListComponent ,title: 'Blog'},
-  {path:'blog-detail/:id',component:BlogComponent, title: 'Blog'},
-  {path:'sign-in',component:SignInComponent , title: 'Sign'},
+  {path:'blog-detail/:id',component:BlogComponent, title: 'Blog' },
+  {path:'sign-in',component:SignInComponent , title: 'Sign' ,},
 
   {path: 'admin' , loadChildren:()=> import('./admin/admin/admin.module').then(m=>m.AdminModule)},
   

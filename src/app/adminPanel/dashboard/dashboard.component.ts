@@ -1,6 +1,7 @@
 import { MediaMatcher } from '@angular/cdk/layout';
 import { ChangeDetectorRef, Component, ViewChild } from '@angular/core';
 import { MatSidenav } from '@angular/material/sidenav';
+import { LoginService } from 'src/app/services/login.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,7 +10,7 @@ import { MatSidenav } from '@angular/material/sidenav';
 })
 export class DashboardComponent {
 
-
+constructor(public  loginservise:LoginService){}
 
 
 
@@ -31,7 +32,14 @@ export class DashboardComponent {
       this.isShowing = false;
     }
   }
+ngOnInit(): void {
+  //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+  //Add 'implements OnInit' to the class.
+  
 
-
+}
+logOutaa(){
+  this.loginservise.logout()
+}
 
 }

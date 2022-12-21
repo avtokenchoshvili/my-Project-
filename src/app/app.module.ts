@@ -23,6 +23,8 @@ import { ReactiveFormsModule ,FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './header/nav/nav.component';
 import { HttpClientModule } from '@angular/common/http';
+import { TangsDialogComponent } from './dialog/tangs-dialog/tangs-dialog.component';
+import { ConfirmDialogComponent } from './dialog/confirm-dialog/confirm-dialog.component';
 
 
 
@@ -41,6 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
     ContactComponent,
     PorfolioComponent,
     BlogListComponent,
+    TangsDialogComponent,
+    ConfirmDialogComponent,
    
   ],
 
