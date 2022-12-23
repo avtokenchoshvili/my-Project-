@@ -9,11 +9,10 @@ import { User } from '../interface/user.interface';
 })
 export class LoginService {
   public isLoggedIn$: BehaviorSubject<boolean> = new BehaviorSubject(false);
-  public isAdmin$: BehaviorSubject<boolean> = new BehaviorSubject(false );
-public isVerify$:BehaviorSubject<boolean> = new BehaviorSubject(false);
+  public isAdmin$: BehaviorSubject<boolean> = new BehaviorSubject(false);
 
 
-  constructor(
+  constructor( 
 		private _http: HttpClient, private _router: Router) {
 		this._checkLogin();
 	}
@@ -25,8 +24,9 @@ public isVerify$:BehaviorSubject<boolean> = new BehaviorSubject(false);
 }
 
 public login(data: User): Observable<User> {
-  return this._http.post<any>('http://localhost:8000/api/login', data).pipe(
-    tap(() => {
+  return this._http.post<User>('http://localhost:8000/api/login', data).pipe(
+    tap((res) => {
+      localStorage.setItem('user' ,JSON.stringify(res));
       this.isLoggedIn$.next(true);
     })
   );

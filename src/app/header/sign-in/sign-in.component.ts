@@ -1,8 +1,10 @@
 import { Component } from "@angular/core";
 import { FormBuilder, FormGroup } from "@angular/forms";
 import { NavigationEnd, Router } from "@angular/router";
-import { filter, first } from "rxjs";
+import { filter, first, switchMap } from "rxjs";
 import { LoginService } from "src/app/services/login.service";
+import { ProfileService } from "src/app/services/profile.service";
+
 
 @Component({
   selector: "app-sign-in",
@@ -16,7 +18,8 @@ export class SignInComponent {
   constructor(
     private _fb: FormBuilder,
     private _loginService: LoginService,
-    private _router: Router
+    private _router: Router,
+    private _profileService: ProfileService
   ) {}
   ngOnInit(): void {
     this.LoginForm = this._fb.group({
@@ -24,7 +27,7 @@ export class SignInComponent {
       password: [`123123123`]
     })
 
-   
+    
       // this._router.events
       //   .pipe(
       //     filter((e) => e instanceof NavigationEnd && !e.url.startsWith('sing-in')),
@@ -36,21 +39,24 @@ export class SignInComponent {
 
   }
 
+ 
 
 
-
-  login() {
-    this._loginService.login(this.LoginForm.value).subscribe(
-      (res) => {
-        console.log(res as unknown as HTMLElement);
-        localStorage.setItem("user", JSON.stringify(res));
-        this._router.navigateByUrl("/dashboard");
-      },
-      (err) => {
-        console.log(err);
-      }
-    );
+login(){
+  this._loginService.login(this.LoginForm.value).pipe(
+    switchMap(() => {
+return this._profileService.getUserData();
+    })
+  ).subscribe(
+    (res) =>{
+      localStorage.setItem('user' ,JSON.stringify(res));
+    },
+    (err)=>{
+    console.log(err)
   }
+  )
+}
+
 
 
 

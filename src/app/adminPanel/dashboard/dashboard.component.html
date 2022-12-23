@@ -11,9 +11,9 @@
 				<mat-icon class="menu-button" [ngClass]="{'rotated' : showSubmenu}" *ngIf="isExpanded || isShowing">expand_more</mat-icon>
 			</mat-list-item>
 			<div class="submenu" [ngClass]="{'expanded' : showSubmenu}" *ngIf="isShowing || isExpanded">
-				<a mat-list-item routerLink="/add-blog">Add Blog</a>
-				<a mat-list-item routerLink="/categories/list">Categories</a>
-				<a mat-list-item routerLink="/tags">Tags</a>
+				<a mat-list-item routerLink="/dashboard/add-blog">Add Blog</a>
+				<a mat-list-item routerLink="/dashboard/categories/list">Categories</a>
+				<a mat-list-item routerLink="/dashboard/tags">Tags</a>
 				
 			
 			</div>
@@ -25,12 +25,12 @@
 
 	<div class="example-sidenav-content">
         <!-- <app-categories></app-categories> -->
-        
+        <router-outlet></router-outlet>
 	</div>
 
 </mat-sidenav-container>
 
-<router-outlet></router-outlet>
+
 
 
 

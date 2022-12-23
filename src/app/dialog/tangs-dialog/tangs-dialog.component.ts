@@ -15,7 +15,7 @@ export class TangsDialogComponent {
   constructor(
     private _tagsService: TagsService,
     public matDialogRef: MatDialogRef<TangsDialogComponent>,
-	@Inject(MAT_DIALOG_DATA) public data: Tags
+	@Inject(MAT_DIALOG_DATA) public data: any
   ) {}
 
   ngOnInit(): void {}

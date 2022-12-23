@@ -22,9 +22,10 @@ import { SignUpComponent } from './header/sign-up/sign-up.component';
 import { ReactiveFormsModule ,FormsModule} from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavComponent } from './header/nav/nav.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TangsDialogComponent } from './dialog/tangs-dialog/tangs-dialog.component';
 import { ConfirmDialogComponent } from './dialog/confirm-dialog/confirm-dialog.component';
+import { TokenInterceptor } from './interceptors/token.interceptor';
 
 
 
@@ -63,7 +64,14 @@ import { ConfirmDialogComponent } from './dialog/confirm-dialog/confirm-dialog.c
    
     
   ],
-  providers: [],
+  providers: [
+
+    {
+      provide :HTTP_INTERCEPTORS,
+      useClass: TokenInterceptor,
+      multi : true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
