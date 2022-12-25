@@ -14,7 +14,7 @@ import { TangsDialogComponent } from 'src/app/dialog/tangs-dialog/tangs-dialog.c
 export class TagsComponent implements OnInit {
 
 
-  tags$!: Observable<any[]>;
+  tags$!: Observable<Tags[]>;
   constructor(
     private _tagsService: TagsService,
     private _matDialog: MatDialog

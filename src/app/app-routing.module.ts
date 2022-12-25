@@ -16,6 +16,7 @@ import { AdminModule} from 'src/app/admin/admin/admin.module';
 
 
 const routes:Routes = [
+  {path : '', component:MainComponent},
   {path:'home',component: MainComponent ,title: 'Home', },
   {path:'porfolio',component:PorfolioComponent ,title: 'Porfolio' },
   {path:'footer',component:FooterComponent  ,title: 'Footer' },

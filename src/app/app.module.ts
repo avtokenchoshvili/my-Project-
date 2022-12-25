@@ -26,6 +26,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TangsDialogComponent } from './dialog/tangs-dialog/tangs-dialog.component';
 import { ConfirmDialogComponent } from './dialog/confirm-dialog/confirm-dialog.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
+import { CategoryDialogComponent } from './dialog/category-dialog/category-dialog.component';
 
 
 
@@ -46,6 +47,7 @@ import { TokenInterceptor } from './interceptors/token.interceptor';
     BlogListComponent,
     TangsDialogComponent,
     ConfirmDialogComponent,
+    CategoryDialogComponent,
    
   ],
 

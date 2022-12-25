@@ -31,11 +31,19 @@
           </button>
           <span class="flex-1"></span>
 
+          <button mat-button   (click)="deleteCat(catList._id)">
+            delete
+          </button>
+          <button mat-button (click)="addCat(catList)">
+          add
+          </button>
           <button mat-button>
-            Save as
+          edit
           </button>
         </div>
       </mat-card-actions>
     </mat-card>
   </div>
+
 </ng-container>
+

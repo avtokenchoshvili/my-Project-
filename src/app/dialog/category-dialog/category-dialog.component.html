@@ -1,0 +1,6 @@
+ <h1> {{ !catData ? 'Add' : 'Edit'  |json }} cat </h1>
+<input [formControl]="catControl" type="text">
+<hr>
+<button (click)="submit()">{{ !catData ? 'Add' : 'Edit' }}</button>
+<button (click)="matDialogRef.close()">cancel</button> -->
+

@@ -44,12 +44,13 @@ export class SignInComponent {
 
 login(){
   this._loginService.login(this.LoginForm.value).pipe(
-    switchMap(() => {
+    switchMap((res) => {
+      localStorage.setItem('user' ,JSON.stringify(res));
 return this._profileService.getUserData();
     })
   ).subscribe(
     (res) =>{
-      localStorage.setItem('user' ,JSON.stringify(res));
+      
     },
     (err)=>{
     console.log(err)

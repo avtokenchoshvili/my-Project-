@@ -12,8 +12,8 @@ export class TagsService {
 
   constructor(private _http: HttpClient) {}
 
-  getAllTag(): Observable<any[]> {
-    return this._http.get<any[]>(`${environment.baseUrl}/api/tags`).pipe(tap(
+  getAllTag(): Observable<Tags[]> {
+    return this._http.get<Tags[]>(`${environment.baseUrl}/api/tags`).pipe(tap(
       res =>{
         console.log(res)
       }
@@ -28,4 +28,8 @@ export class TagsService {
 	addTag(data: Tags) {
 		return this._http.post(`${environment.baseUrl}/api/tags`, data)
 	}
+
+  editTag( data : {  id:string,  title:string  } ){
+return this._http.put(`${environment.baseUrl}/api/tags`, data) 
+  }
 }

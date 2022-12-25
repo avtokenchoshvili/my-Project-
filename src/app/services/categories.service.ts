@@ -20,5 +20,11 @@ export class CategoriesService {
       return this._http.delete(`${environment.baseUrl}/api/categories/${categoryId}`)
     }
 
+     addCategory(data: Categories){
+      return this._http.post(`${environment.baseUrl}/api/categories`, data)
+    }
 
+editCategory( data : Categories){
+  return this._http.put(`${environment.baseUrl}/api/categories`, data)
+}
 }
