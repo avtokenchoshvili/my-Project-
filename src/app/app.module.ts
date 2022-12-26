@@ -27,7 +27,7 @@ import { TangsDialogComponent } from './dialog/tangs-dialog/tangs-dialog.compone
 import { ConfirmDialogComponent } from './dialog/confirm-dialog/confirm-dialog.component';
 import { TokenInterceptor } from './interceptors/token.interceptor';
 import { CategoryDialogComponent } from './dialog/category-dialog/category-dialog.component';
-
+import { MatFormFieldModule } from "@angular/material/form-field";
 
 
 
@@ -62,7 +62,8 @@ import { CategoryDialogComponent } from './dialog/category-dialog/category-dialo
     FontAwesomeModule,
     AppRoutingModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule
    
     
   ],

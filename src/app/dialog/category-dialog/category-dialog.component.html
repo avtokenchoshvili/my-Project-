@@ -1,6 +1,68 @@
- <h1> {{ !catData ? 'Add' : 'Edit'  |json }} cat </h1>
-<input [formControl]="catControl" type="text">
-<hr>
+<!-- <h1>{{ !catData ? 'Add' : 'Edit' |json }} Tag</h1>
+
+<hr />
 <button (click)="submit()">{{ !catData ? 'Add' : 'Edit' }}</button>
 <button (click)="matDialogRef.close()">cancel</button> -->
 
+<div class="container">
+  <form [formGroup]="catForm">
+
+    <div>
+      <mat-form-field appearance="outline" color="primary">
+        <mat-icon matPrefix>person_outline</mat-icon>
+        <mat-label>surname</mat-label>
+        <input type="text" matInput formControlName="title" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline" color="primary">
+        <mat-icon matPrefix>desc</mat-icon>
+        <mat-label>desc</mat-label>
+        <input type="text" matInput formControlName="descr" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" color="primary">
+        <mat-icon matPrefix>lock_outline</mat-icon>
+        <mat-label>password</mat-label>
+        <input type="text" matInput formControlName="metaKeyword" />
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline" color="primary">
+        <mat-icon matPrefix>elderly</mat-icon>
+        <mat-label>age</mat-label>
+        <input type="text" matInput formControlName="metaDescr" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline" color="primary">
+        <mat-icon matPrefix>phone</mat-icon>
+        <mat-label>phone Number</mat-label>
+        <input type="text" matInput formControlName="metaAuthor" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline" color="primary">
+        <mat-icon matPrefix>phone</mat-icon>
+        <mat-label>phone Number</mat-label>
+        <input type="text" matInput formControlName="img" />
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline" color="primary">
+        <mat-icon matPrefix>phone</mat-icon>
+        <mat-label>phone Number</mat-label>
+        <input type="text" value="true" matInput formControlName="isFavorite" />
+      </mat-form-field>
+    </div>
+
+    <button (click)="send()" mat-raised-button color="primary">
+      sign up
+    </button>
+  </form>
+</div>

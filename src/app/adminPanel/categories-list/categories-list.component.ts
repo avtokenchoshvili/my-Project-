@@ -25,20 +25,25 @@ ngOnInit(): void {
   //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
   //Add 'implements OnIconit' to the class.
   console.log(this.categoryesList$  + 'saaaaaaaaaaa')
+  
 }
 
-addCat(data?: Categories) {
+addCat(catData: Categories) {
   const dialog = this._matDialog.open(CategoryDialogComponent, {
     width: '440px',
-    data: data
+    data: catData
   });
 
   dialog.afterClosed().subscribe(
     res => {
-      console.log(res)
+   
       if (res) {
+        this._categoriesService.addCategory(catData).subscribe(
+
+          
+        )
         this.categoryesList$;
-        console.log(res)
+        
       }
     }
   )

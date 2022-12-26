@@ -20,7 +20,7 @@ export class TangsDialogComponent {
   ) {}
 
   ngOnInit(): void {
-console.log(this.data)
+console.log(this.data  + 'sdddddddd')
     if(this.data)this.tagControl.setValue(this.data.title);
   }
 

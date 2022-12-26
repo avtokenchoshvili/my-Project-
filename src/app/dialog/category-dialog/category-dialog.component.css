@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: gray;
+    border-radius: 20px;
+    text-align: center;
+   
+    z-index: 10;
+   
+    top: 10%;
+ 
+    height: 700px;
+    width: 600px;
+    padding: 80px;
+  }
+  
+  .mdc-button {
+    width: 100%;
+  
+    border-radius: 5px;
+  }
+  

@@ -19,6 +19,8 @@ import {LayoutModule} from '@angular/cdk/layout';
 import {MatListModule} from '@angular/material/list';
 import { MatDialogModule } from '@angular/material/dialog';
 
+import {MatCheckboxModule} from '@angular/material/checkbox';
+
 
 
 
@@ -40,6 +42,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     LayoutModule,
     MatListModule,
     MatDialogModule,
+    MatCheckboxModule
     
   ],
   imports: [
@@ -58,6 +61,7 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSidenavModule,
     LayoutModule,
     MatListModule,
+    MatCheckboxModule,
     MatDialogModule
    
    

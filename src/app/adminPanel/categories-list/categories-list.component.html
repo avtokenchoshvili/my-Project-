@@ -8,7 +8,7 @@
       layout-wrap
       layout-align="center center"
       flex="25"
-    >
+    >{{catList.title}}
       <mat-card-header class="flex">
         <img mat-card-avatar src="/assets/photo/r2n21nrx9xj81.jpg" />
         <mat-card-subtitle>
@@ -35,9 +35,9 @@
             delete
           </button>
           <button mat-button (click)="addCat(catList)">
-          add
-          </button>
-          <button mat-button>
+            add
+            </button>
+          <button mat-button (click)="addCat(catList)">
           edit
           </button>
         </div>

@@ -29,7 +29,7 @@ export class TagsComponent implements OnInit {
     console.log(this.tags$ + 'sda');
   }
 
-  addTag(tag?: any) {
+  addTag(tag?: Tags) {
     const dialog = this._matDialog.open(TangsDialogComponent, {
       width: '440px',
 			data: tag
